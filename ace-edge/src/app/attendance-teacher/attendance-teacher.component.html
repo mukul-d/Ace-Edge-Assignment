@@ -1,0 +1,17 @@
+<mat-card class="width-95">
+  <mat-card class="border-less shadow-less float-left">
+    <mat-card-subtitle>Date:</mat-card-subtitle>
+    {{ date | date }}
+  </mat-card>
+  <mat-card class="border-less shadow-less float-left">
+    <mat-card-subtitle>Class </mat-card-subtitle>
+    {{ class.standard }}-{{ class.section }}
+  </mat-card>
+
+  <app-attendance-table
+    [displayMode]="'teacher'"
+    [class]="class"
+    [date]="date"
+  ></app-attendance-table>
+
+</mat-card>
